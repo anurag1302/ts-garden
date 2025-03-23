@@ -33,7 +33,7 @@ console.log(func(10, 20));
 console.log(func2(10, 30));
 
 console.log("*****************OBJECTS******************************");
-
+//Objects
 type details = {
   firstName: string;
   lastName: string;
@@ -70,3 +70,39 @@ const emp2: details = {
 
 console.log(emp1);
 console.log(emp2.getFullAddress("Delhi", "India"));
+
+console.log(
+  "*****************OBJECTS VIA INTERFACES******************************"
+);
+
+interface employeeDetails {
+  firstName: string;
+  lastName: string;
+  gender: string;
+  salary: number;
+  isAdmin: boolean;
+  dateOfBirth: Date;
+  getFullAddress: (city: string, country: string) => string;
+}
+
+interface newEmployeeDetails extends employeeDetails {
+  state: string;
+  country: string;
+}
+
+const emp3: newEmployeeDetails = {
+  firstName: "Dave",
+  lastName: "Sam",
+  gender: "Male",
+  salary: 15000,
+  isAdmin: false,
+  dateOfBirth: new Date(),
+  state: "NY",
+  country: "US",
+  getFullAddress: (city, country) => {
+    return city + "-" + country;
+  },
+};
+
+console.log(emp3);
+console.log(emp3.getFullAddress("Chicago", "USA"));

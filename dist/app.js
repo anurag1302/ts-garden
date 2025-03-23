@@ -47,3 +47,19 @@ const emp2 = {
 };
 console.log(emp1);
 console.log(emp2.getFullAddress("Delhi", "India"));
+console.log("*****************OBJECTS VIA INTERFACES******************************");
+const emp3 = {
+    firstName: "Dave",
+    lastName: "Sam",
+    gender: "Male",
+    salary: 15000,
+    isAdmin: false,
+    dateOfBirth: new Date(),
+    state: "NY",
+    country: "US",
+    getFullAddress: (city, country) => {
+        return city + "-" + country;
+    },
+};
+console.log(emp3);
+console.log(emp3.getFullAddress("Chicago", "USA"));
