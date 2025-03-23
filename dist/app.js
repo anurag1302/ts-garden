@@ -22,3 +22,28 @@ arr3.forEach((item) => {
 console.log("*****************FUNCTIONS******************************");
 console.log(func(10, 20));
 console.log(func2(10, 30));
+console.log("*****************OBJECTS******************************");
+const emp1 = {
+    firstName: "John",
+    lastName: "Cena",
+    gender: "Male",
+    salary: 12000.89,
+    isAdmin: false,
+    dateOfBirth: new Date(),
+    getFullAddress: (city, country) => {
+        return city + "-" + country;
+    },
+};
+const emp2 = {
+    firstName: "Mary",
+    lastName: "Jane",
+    gender: "Female",
+    salary: 13000,
+    isAdmin: true,
+    dateOfBirth: new Date(),
+    getFullAddress: (city, country) => {
+        return city + "-" + country;
+    },
+};
+console.log(emp1);
+console.log(emp2.getFullAddress("Delhi", "India"));

@@ -31,3 +31,42 @@ arr3.forEach((item) => {
 console.log("*****************FUNCTIONS******************************");
 console.log(func(10, 20));
 console.log(func2(10, 30));
+
+console.log("*****************OBJECTS******************************");
+
+type details = {
+  firstName: string;
+  lastName: string;
+  gender: string;
+  salary: number;
+  isAdmin: boolean;
+  dateOfBirth: Date;
+  getFullAddress: (city: string, country: string) => string;
+};
+
+const emp1: details = {
+  firstName: "John",
+  lastName: "Cena",
+  gender: "Male",
+  salary: 12000.89,
+  isAdmin: false,
+  dateOfBirth: new Date(),
+  getFullAddress: (city, country) => {
+    return city + "-" + country;
+  },
+};
+
+const emp2: details = {
+  firstName: "Mary",
+  lastName: "Jane",
+  gender: "Female",
+  salary: 13000,
+  isAdmin: true,
+  dateOfBirth: new Date(),
+  getFullAddress: (city, country) => {
+    return city + "-" + country;
+  },
+};
+
+console.log(emp1);
+console.log(emp2.getFullAddress("Delhi", "India"));
