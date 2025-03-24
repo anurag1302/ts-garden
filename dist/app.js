@@ -63,3 +63,14 @@ const emp3 = {
 };
 console.log(emp3);
 console.log(emp3.getFullAddress("Chicago", "USA"));
+console.log("*****************FUNCTIONS******************************");
+const add = (a, b, c) => {
+    if (typeof c === "undefined") {
+        return a + b;
+    }
+    else {
+        return a + b + c;
+    }
+};
+console.log(add(1, 2));
+console.log(add(1, 2, 3));

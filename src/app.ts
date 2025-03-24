@@ -106,3 +106,21 @@ const emp3: newEmployeeDetails = {
 
 console.log(emp3);
 console.log(emp3.getFullAddress("Chicago", "USA"));
+
+console.log("*****************FUNCTIONS******************************");
+//Functions
+
+//Function with optional parameter
+
+type FuncType = (a: number, b: number, c?: number) => number;
+
+const add: FuncType = (a, b, c) => {
+  if (typeof c === "undefined") {
+    return a + b;
+  } else {
+    return a + b + c;
+  }
+};
+
+console.log(add(1, 2));
+console.log(add(1, 2, 3));
