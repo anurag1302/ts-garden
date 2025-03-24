@@ -125,7 +125,7 @@ const add: FuncType = (a, b, c) => {
 console.log(add(1, 2));
 console.log(add(1, 2, 3));
 
-//Function with default parameter
+//Function with default parameter via type alias
 
 type FuncType1 = (a: number, b: number, c?: number) => number;
 
@@ -135,3 +135,12 @@ const add1: FuncType1 = (a, b, c = 20) => {
 
 console.log(add1(1, 2));
 console.log(add1(1, 2, 3));
+
+//Function with default parameter inline
+
+const add2 = (a: number, b: number, c: number = 20): number => {
+  return a + b + c;
+};
+
+console.log(add2(10, 25));
+console.log(add2(10, 20, 30));

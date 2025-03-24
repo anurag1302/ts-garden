@@ -79,3 +79,9 @@ const add1 = (a, b, c = 20) => {
 };
 console.log(add1(1, 2));
 console.log(add1(1, 2, 3));
+//Function with default parameter inline
+const add2 = (a, b, c = 20) => {
+    return a + b + c;
+};
+console.log(add2(10, 25));
+console.log(add2(10, 20, 30));
