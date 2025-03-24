@@ -85,3 +85,12 @@ const add2 = (a, b, c = 20) => {
 };
 console.log(add2(10, 25));
 console.log(add2(10, 20, 30));
+const restFunc = (...num) => {
+    let res = 1;
+    num.forEach((n) => {
+        res = res * n;
+    });
+    return res;
+};
+console.log(restFunc(1, 2, 3, 4, 5));
+console.log(restFunc(10, 20, 30, 40));

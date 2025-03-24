@@ -144,3 +144,18 @@ const add2 = (a: number, b: number, c: number = 20): number => {
 
 console.log(add2(10, 25));
 console.log(add2(10, 20, 30));
+
+//Function with rest operator
+
+type Rest = (...num: number[]) => number;
+const restFunc: Rest = (...num): number => {
+  let res: number = 1;
+  num.forEach((n) => {
+    res = res * n;
+  });
+
+  return res;
+};
+
+console.log(restFunc(1, 2, 3, 4, 5));
+console.log(restFunc(10, 20, 30, 40));
