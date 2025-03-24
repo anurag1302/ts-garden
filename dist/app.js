@@ -94,3 +94,13 @@ const restFunc = (...num) => {
 };
 console.log(restFunc(1, 2, 3, 4, 5));
 console.log(restFunc(10, 20, 30, 40));
+const getData = (product) => {
+    return product;
+};
+console.log(getData({
+    id: 101,
+    name: "Mac",
+    imageUrl: "someURL",
+    quantity: 10,
+    manufacturingDate: new Date(),
+}));

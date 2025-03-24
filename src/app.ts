@@ -159,3 +159,29 @@ const restFunc: Rest = (...num): number => {
 
 console.log(restFunc(1, 2, 3, 4, 5));
 console.log(restFunc(10, 20, 30, 40));
+
+//Function with objects
+
+type Product = {
+  id: number;
+  name: string;
+  imageUrl: string;
+  quantity: number;
+  manufacturingDate: Date;
+};
+
+type GETProductData = (product: Product) => Product;
+
+const getData: GETProductData = (product) => {
+  return product;
+};
+
+console.log(
+  getData({
+    id: 101,
+    name: "Mac",
+    imageUrl: "someURL",
+    quantity: 10,
+    manufacturingDate: new Date(),
+  })
+);
