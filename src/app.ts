@@ -124,3 +124,14 @@ const add: FuncType = (a, b, c) => {
 
 console.log(add(1, 2));
 console.log(add(1, 2, 3));
+
+//Function with default parameter
+
+type FuncType1 = (a: number, b: number, c?: number) => number;
+
+const add1: FuncType1 = (a, b, c = 20) => {
+  return a + b + c;
+};
+
+console.log(add1(1, 2));
+console.log(add1(1, 2, 3));

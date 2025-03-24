@@ -74,3 +74,8 @@ const add = (a, b, c) => {
 };
 console.log(add(1, 2));
 console.log(add(1, 2, 3));
+const add1 = (a, b, c = 20) => {
+    return a + b + c;
+};
+console.log(add1(1, 2));
+console.log(add1(1, 2, 3));
