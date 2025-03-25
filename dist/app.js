@@ -110,6 +110,9 @@ class Employee {
         this.getEmpDetails = () => {
             return `${this.firstName} - ${this.lastName} - ${this.department}`;
         };
+        this.getSalary = () => {
+            return this.salary;
+        };
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -119,5 +122,6 @@ class Employee {
     }
 }
 const employee1 = new Employee(101, "John", "Cena", "IT", 20000, new Date());
-console.log("Emp1 Salary", employee1.salary);
+//console.log("Emp1 Salary", employee1.salary); // private, is not accessible
+console.log("Emp1 salary", employee1.getSalary());
 console.log("Emp1 Details", employee1.getEmpDetails());

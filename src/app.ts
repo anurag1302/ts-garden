@@ -193,7 +193,7 @@ class Employee {
   firstName: string;
   lastName: string;
   department: string;
-  salary: number;
+  private salary: number;
   dateOfBirth: Date;
 
   constructor(
@@ -215,8 +215,13 @@ class Employee {
   getEmpDetails = (): string => {
     return `${this.firstName} - ${this.lastName} - ${this.department}`;
   };
+
+  getSalary = (): number => {
+    return this.salary;
+  };
 }
 
 const employee1 = new Employee(101, "John", "Cena", "IT", 20000, new Date());
-console.log("Emp1 Salary", employee1.salary);
+//console.log("Emp1 Salary", employee1.salary); // private, is not accessible
+console.log("Emp1 salary", employee1.getSalary());
 console.log("Emp1 Details", employee1.getEmpDetails());
