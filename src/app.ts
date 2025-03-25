@@ -225,3 +225,19 @@ const employee1 = new Employee(101, "John", "Cena", "IT", 20000, new Date());
 //console.log("Emp1 Salary", employee1.salary); // private, is not accessible
 console.log("Emp1 salary", employee1.getSalary());
 console.log("Emp1 Details", employee1.getEmpDetails());
+
+class Vehicle {
+  readonly id: number;
+  name: string;
+  type: string;
+
+  constructor(id: number, name: string, type: string) {
+    this.id = id;
+    this.name = name;
+    this.type = type;
+  }
+}
+
+const car = new Vehicle(101, "MyCar", "Car");
+console.log(car.id);
+//car.id = 102; //not allowed, because id is readonly
