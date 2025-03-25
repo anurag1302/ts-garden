@@ -104,3 +104,20 @@ console.log(getData({
     quantity: 10,
     manufacturingDate: new Date(),
 }));
+console.log("*****************CLASS******************************");
+class Employee {
+    constructor(id, firstName, lastName, department, salary, dob) {
+        this.getEmpDetails = () => {
+            return `${this.firstName} - ${this.lastName} - ${this.department}`;
+        };
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.department = department;
+        this.salary = salary;
+        this.dateOfBirth = dob;
+    }
+}
+const employee1 = new Employee(101, "John", "Cena", "IT", 20000, new Date());
+console.log("Emp1 Salary", employee1.salary);
+console.log("Emp1 Details", employee1.getEmpDetails());

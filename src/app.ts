@@ -185,3 +185,38 @@ console.log(
     manufacturingDate: new Date(),
   })
 );
+
+console.log("*****************CLASS******************************");
+
+class Employee {
+  id: number;
+  firstName: string;
+  lastName: string;
+  department: string;
+  salary: number;
+  dateOfBirth: Date;
+
+  constructor(
+    id: number,
+    firstName: string,
+    lastName: string,
+    department: string,
+    salary: number,
+    dob: Date
+  ) {
+    this.id = id;
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.department = department;
+    this.salary = salary;
+    this.dateOfBirth = dob;
+  }
+
+  getEmpDetails = (): string => {
+    return `${this.firstName} - ${this.lastName} - ${this.department}`;
+  };
+}
+
+const employee1 = new Employee(101, "John", "Cena", "IT", 20000, new Date());
+console.log("Emp1 Salary", employee1.salary);
+console.log("Emp1 Details", employee1.getEmpDetails());
